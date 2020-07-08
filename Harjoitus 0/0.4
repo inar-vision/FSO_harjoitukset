@@ -1,0 +1,9 @@
+title 0.4 New Note
+
+# action: /new_note method: POST
+Form->Palvelin: HTTP POST https://fullstack-exampleapp.herokuapp.com/new-note
+# Redirect pyyntö palvelimelta selaimelle 
+Palvelin->Selain: HTTP GET /notes
+Selain->Palvelin: HTTP GET main.css
+Selain->Palvelin: HTTP GET main.js
+Selain->Palvelin: HTTP GET data.json
